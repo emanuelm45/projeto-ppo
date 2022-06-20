@@ -1,0 +1,100 @@
+@import url(variables.css);
+
+body {
+    background: radial-gradient(rgb(160, 160, 160), #5f6970);
+}
+
+#input-search-classes {
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 2.2rem;
+    border-radius: 1rem;
+    width: 50%;
+    height: 5rem;
+    font-family: 'Josefin Sans';
+}
+
+.user-icon {
+    position: absolute;
+    right: 1rem;
+    max-width: 10rem;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.course-list {
+    margin-top: 2rem;
+}
+
+.course-name {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    user-select: none;
+}
+
+.class-list {
+    font-size: 2.8rem;
+    font-weight: normal;
+    margin: 1rem 0 1rem 2rem;
+}
+
+.name-list {
+    margin: 1rem 0 1rem 5rem;
+}
+.name-list li {
+    position: relative;
+    margin: 2rem 0;
+}
+
+.nested {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.caret {
+    cursor: pointer;
+    user-select: none;
+}
+
+.caret::before {
+    cursor: pointer;
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+    transition: .3s ease;
+}
+
+.caret-down::before {
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Safari */
+    transform: rotate(90deg) translate(-.2rem, 1rem);
+    color: var(--color-off-white);
+}
+
+.main-disabled {
+    background-color: var(--color-black-muted);
+    opacity: .5;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.container-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: transform(-50%, -50%);
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+    <style>
+        @import url(../css/variables.css);
+        
+        :host {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        div.modal {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--color-off-white);
+            position: absolute;
+            padding: 5rem;
+            border-radius: 2rem;
+            opacity: .5;
+            animation: showModal .8s forwards;
+        }
+
+        .btn-close-modal {
+            position: absolute;
+            right: -1rem;
+            top: -1rem;
+            border-radius: 2rem;
+            padding: .8rem;
+            background-color: var(--color-light-gray);
+            user-select: none;
+            transition: all .3s;
+        }
+
+        div.modal .input-coin {
+            padding: 1rem 2rem;
+        }
+
+        div.modal .btn-save-coin {
+            margin-top: 1.5rem;
+            align-self: center;
+            padding: 1rem 2rem;
+            font-size: 2rem;
+            border-radius: 1rem;
+            transition: all .4s;
+        }
+        .btn-save-coin:hover {
+            background-color: var(--color-dark-gray-hover-muted);
+        }
+
+        @keyframes showModal {
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    </style>
+
+    <div class="modal">
+        <span class="btn-close-modal material-symbols-outlined">
+            close
+        </span>
+        <input type="number" class="input-coin">
+        <button class="btn-save-coin">Adicionar</button>
+    </div>
+
+</body>
+
+</html>

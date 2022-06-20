@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+</head>
+
+<body>
+    <style>
+        .main-container {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 30rem;
+        }
+
+        .signal-container {
+            background-color: var(--color-dark-gray-hover);
+            max-height: 2rem;
+            padding: 1rem 1.7rem;
+            border-radius: 50%;
+            transition: all .3s;
+            cursor: pointer;
+        }
+
+        .signal-container:hover {
+            background-color: var(--color-off-white);
+        }
+
+        .vertical-div {
+            position: absolute;
+            height: 2rem;
+            width: .5rem;
+            background-color: var(--color-black);
+        }
+
+        .horizontal-div {
+            height: 2rem;
+            width: .5rem;
+            background-color: var(--color-black);
+            transform: rotate(90deg);
+        }
+
+        .name {
+            display: flex;
+            align-items: center;
+            font-size: 2.8rem;
+        }
+    </style>
+
+    <div class="main-container">
+        <div class="name"></div>
+        <div class="signal-container">
+            <div class="vertical-div"></div>
+            <div class="horizontal-div"></div>
+        </div>
+    </div>
+<!-- ta errado, burro
+    <script>
+        const div = document.querySelector("div")
+        console.log("div")
+        console.log("saaaaaaaaaaaaaaaaa")
+    </script> -->
+</body>
+
+</html>
